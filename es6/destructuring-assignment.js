@@ -61,12 +61,34 @@
 
 // 默认值
 
-let [foo = true] = [];
-foo // true
+// let [foo = true] = [];
+// foo // true
 
-let [x, y = 'b'] = ['a']; // x='a', y='b'
-let [x, y = 'b'] = ['a', undefined]; // x='a', y='b'
+// let [x, y = 'b'] = ['a']; // x='a', y='b'
+// let [x, y = 'b'] = ['a', undefined]; // x='a', y='b'
 
+
+let str = `wxc64eba09b049aa2c
+wxb90c18ab41175c05
+wxc789c6aa4dc832bc
+wxd9471d06cf93fa4b
+wx91c3816b09598ba3
+wxbed7fe198c85e8c4
+wxa6fae1de0f30592c
+wx99a792e1f4edb2c2
+wx7920768bef250e76
+wxecaf936bbce6c82e`
+
+let arr = str.split('\n')
+let result = ""
+for (let i = 0; i < arr.length; i++) {
+    if (i == arr.length -1) {
+        result += "\"" +arr[i] + "\"";
+    } else {
+        result += "\"" +arr[i] + "\",\n";
+    }
+}
+console.log(result)
 
 
 
